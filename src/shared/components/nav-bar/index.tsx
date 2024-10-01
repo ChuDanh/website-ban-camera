@@ -4,12 +4,11 @@ import { Box, List, ListItemButton, ListItemText } from '@mui/material';
 import { usePathname, useRouter } from 'next/navigation';
 import { useMemo } from 'react';
 import { paths } from '../../../routes/paths';
-import IntroPage from '../intro-page';
 
 export default function NavBar() {
   const router = useRouter();
-  const pathname = usePathname(); // Lấy đường dẫn hiện tại
-  console.log('pathname', pathname);
+  const pathname = usePathname();
+
   const handleChange = useMemo(
     () => (path: string) => {
       router.push(path);
@@ -46,7 +45,6 @@ export default function NavBar() {
           </>
         ))}
       </Box>
-      <IntroPage title={currentPage || '---'} />
     </>
   );
 }
@@ -55,7 +53,7 @@ const LINKS = [
   {
     value: 'shop',
     label: 'Sản phẩm',
-    path: paths.dashboard.root,
+    path: paths.cameras.root,
   },
   {
     value: 'flash-sale',
@@ -65,7 +63,7 @@ const LINKS = [
   {
     value: 'payment_instructions',
     label: 'Hướng dẫn thanh toán',
-    path: paths.dashboard.payment.root,
+    path: '#',
   },
   {
     value: 'history',
@@ -75,6 +73,11 @@ const LINKS = [
   {
     value: 'sell',
     label: 'Đăng bán sản phẩm',
+    path: '#',
+  },
+  {
+    value: 'contact',
+    label: 'Liên hệ',
     path: '#',
   },
 ];

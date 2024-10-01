@@ -3,9 +3,10 @@ import Box from '@mui/material/Box';
 
 type Props = {
   title: string;
+  subtitle?: string;
   img?: string;
 };
-export default function IntroPage({ title, img }: Props) {
+export default function IntroPage({ title, subtitle, img }: Props) {
   return (
     <Box
       sx={{
@@ -23,9 +24,21 @@ export default function IntroPage({ title, img }: Props) {
             Trang chủ
           </Typography>
           <Box mx={0.5}>/</Box>
-          <Typography fontSize={14} fontWeight={500} sx={{ color: 'text.secondary' }}>
-            {title}
-          </Typography>
+          {subtitle ? (
+            <>
+              <Typography fontSize={14} fontWeight={500} sx={{ color: 'text.secondary' }}>
+                {title}
+              </Typography>
+              <Box mx={0.5}>/</Box>
+              <Typography fontSize={14} fontWeight={500} sx={{ color: 'text.secondary' }}>
+                {subtitle}
+              </Typography>
+            </>
+          ) : (
+            <Typography fontSize={14} fontWeight={500} sx={{ color: 'text.secondary' }}>
+              {title}
+            </Typography>
+          )}
         </Box>
       </Box>
     </Box>

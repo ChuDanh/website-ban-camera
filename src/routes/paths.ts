@@ -8,10 +8,8 @@ export const paths = {
     root: '/register',
   },
 
-  dashboard: {
+  cameras: {
     root: '/cameras',
-    payment: {
-      root: '/payment',
-    },
+    detail: (id: string) => `/cameras/${id}/detail`,
   },
 };

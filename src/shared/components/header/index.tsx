@@ -40,6 +40,7 @@ export const Header = () => {
             />
           </Box>
         </Grid>
+
         <Grid size={3} container sx={{ justifyContent: 'flex-end' }}>
           <Box
             sx={{

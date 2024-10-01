@@ -7,8 +7,8 @@ import {
   Typography,
 } from '@mui/material';
 import { useSearchParams } from 'next/navigation';
-import Iconify from '../../../../shared/components/iconify';
-import Scrollbar from '../../../../shared/components/scrollbar';
+import Iconify from 'src/shared/components/iconify';
+import Scrollbar from 'src/shared/components/scrollbar';
 import { TFetchingParams } from '../_hooks/use-fetching-params';
 import { CATEGORIES } from '../constants';
 
@@ -25,7 +25,7 @@ export function Categories({ setFetchingParams }: Props) {
   const code = searchParams.get('code');
 
   return (
-    <Scrollbar>
+    <Scrollbar sx={{ pt: 2 }}>
       {CATEGORIES.map((category) => (
         <>
           <List

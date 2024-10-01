@@ -57,6 +57,7 @@ export const FilterOption = () => {
     <FormProvider methods={methods} onSubmit={onSubmit}>
       <Button
         variant="outlined"
+        fullWidth
         onClick={open.onToggle}
         startIcon={<Iconify icon={open.value ? 'raphael:arrowup' : 'raphael:arrowdown'} />}
       >
@@ -65,7 +66,7 @@ export const FilterOption = () => {
 
       <Collapse in={open.value} timeout="auto" unmountOnExit>
         <Grid container spacing={2} sx={{ py: 1.5 }}>
-          <Grid size={4}>
+          <Grid size={12}>
             <RHFSelect
               name="status"
               label="Tình trạng "
@@ -83,7 +84,7 @@ export const FilterOption = () => {
             />
           </Grid>
 
-          <Grid size={4}>
+          <Grid size={12}>
             <RHFSelect
               name="money"
               label="Giá tiền"

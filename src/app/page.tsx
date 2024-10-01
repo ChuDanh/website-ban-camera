@@ -2,5 +2,5 @@ import { redirect } from 'next/navigation';
 import { paths } from '../routes/paths';
 
 export default function Home() {
-  return redirect(paths.dashboard.root);
+  return redirect(paths.cameras.root);
 }

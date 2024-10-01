@@ -3,16 +3,16 @@ export const CATEGORIES = [
     group: 'Danh mục sản phẩm',
     items: [
       {
-        name: 'Webcam',
-        code: 'webcam',
+        name: 'Tổng hợp',
+        code: 'all',
       },
       {
-        name: 'Ngoài trời',
-        code: 'outdoor',
+        name: 'Camera chụp ảnh',
+        code: 'camera_take_photos',
       },
       {
-        name: 'Giám sát',
-        code: 'surveillance',
+        name: 'Camera giám sát',
+        code: 'surveillance_cameras',
       },
     ],
   },
